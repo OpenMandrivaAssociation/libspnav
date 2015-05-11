@@ -6,7 +6,7 @@
 
 Name:		libspnav
 Version:	0.2.3
-Release:	1
+Release:	0.1
 Summary:	library to access 3D-input-devices
 Group:		System/Libraries
 License:	BSD
