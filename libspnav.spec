@@ -81,7 +81,7 @@ This package contains static libraries and header files need for development.
 
 %build
 sed -i "s/libdir=lib/libdir=%{_lib}/g" configure
-%configure --disable-static
+%configure2_5x --disable-static
 sed -i "s/CFLAGS =/CFLAGS +=/g" Makefile
 %make
 
