@@ -77,7 +77,7 @@ This package contains static libraries and header files need for development.
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 
 %build
 sed -i "s/libdir=lib/libdir=%{_lib}/g" configure
