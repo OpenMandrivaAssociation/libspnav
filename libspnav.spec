@@ -79,6 +79,8 @@ This package contains static libraries and header files need for development.
 %autopatch -p1
 
 %build
+export CC=gcc
+export CXX=g++
 sed -i "s/libdir=lib/libdir=%{_lib}/g" configure
 %configure --disable-static
 sed -i "s/CFLAGS =/CFLAGS +=/g" Makefile
