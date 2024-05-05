@@ -5,14 +5,14 @@
 %define lib_name %mklibname %{oname} %{lib_major}
 
 Name:		libspnav
-Version:	0.2.3
-Release:	2
+Version:	1.1
+Release:	1
 Summary:	library to access 3D-input-devices
 Group:		System/Libraries
 License:	BSD
 Url:		http://spacenav.sourceforge.net/
-Source0:	http://download.sourceforge.net/spacenav/%{name}-%{version}.tar.gz
-Patch0:		libspnav-0.2.3-lib_links.patch
+Source0:	https://github.com/FreeSpacenav/libspnav/releases/download/v%{version}/libspnav-%{version}.tar.gz
+Patch0:		libspnav-1.1-link-lm.patch
 BuildRequires:	pkgconfig(x11)
 Obsoletes:	spnav < 0.2.2-4
 
@@ -72,12 +72,12 @@ This package contains static libraries and header files need for development.
 %files -n %develname
 %{_includedir}/*.h
 %{_libdir}/*.so
+%{_datadir}/pkgconfig/*.pc
 
 #--------------------------------------------------------------------
 
 %prep
-%setup -q
-%autopatch -p1
+%autosetup -p1
 
 %build
 sed -i "s/libdir=lib/libdir=%{_lib}/g" configure
