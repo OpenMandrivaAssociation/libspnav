@@ -10,7 +10,7 @@ Release:	1
 Summary:	library to access 3D-input-devices
 Group:		System/Libraries
 License:	BSD
-Url:		http://spacenav.sourceforge.net/
+Url:		https://spacenav.sourceforge.net/
 Source0:	https://github.com/FreeSpacenav/libspnav/releases/download/v%{version}/libspnav-%{version}.tar.gz
 Patch0:		libspnav-1.1-link-lm.patch
 BuildRequires:	pkgconfig(x11)
