@@ -6,17 +6,18 @@
 %define oldlibname %mklibname %{oname} 0
 
 Name:		libspnav
-Version:	1.1
-Release:	2
+Version:	1.2
+Release:	1
 Summary:	library to access 3D-input-devices
 Group:		System/Libraries
 License:	BSD
 Url:		https://spacenav.sourceforge.net/
 Source0:	https://github.com/FreeSpacenav/libspnav/releases/download/v%{version}/libspnav-%{version}.tar.gz
-Patch0:		libspnav-1.1-link-lm.patch
-Patch1:		libspnav-1.1-version.patch
 BuildRequires:	pkgconfig(x11)
 Obsoletes:	spnav < 0.2.2-4
+
+%patchlist
+libspnav-1.2-version.patch
 
 %description
 The libspnav library is provided as a replacement of the magellan library. It
