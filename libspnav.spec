@@ -13,6 +13,11 @@ Group:		System/Libraries
 License:	BSD
 Url:		https://spacenav.sourceforge.net/
 Source0:	https://github.com/FreeSpacenav/libspnav/releases/download/v%{version}/libspnav-%{version}.tar.gz
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(x11)
 Obsoletes:	spnav < 0.2.2-4
 
